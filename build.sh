@@ -1,0 +1,1 @@
+npm run electron:build -- --linux deb --win nsis
