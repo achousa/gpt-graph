@@ -2,22 +2,33 @@
 
 ![gpt-graph](https://github.com/achousa/gpt-graph/blob/main/extras/gpt-graph.png?raw=true)
 
-gpt-graph is a text-to-graph application that uses GPT-3 to generate a graph of entities and their relationships. GPT-3 is a language model developed by OpenAI that can perform a variety of natural language tasks, including text generation, translation, and summarization. With gpt-graph, users can provide a text document to the application, and it will extract the relevant entities and their relationships to create a graph. It can also search for entity attributes in the text, that cannot be represented as a relation, and label the entity with those.
+gpt-graph is a text-to-graph application that uses GPT-3 to generate a graph of entities and their relationships. GPT-3 is a language model developed by OpenAI that can perform a variety of natural language tasks, including text generation, translation, and summarization. With gpt-graph, users can provide a text document to the application, and it will extract the relevant entities and their relationships to create a graph. It can also search for information in the text that cannot be represented as relations, and label the entities with those attributes.
 
 gpt-graph uses [cytoscape.js](https://js.cytoscape.org/) graph visualization library to display the graph in an interactive format. Users can explore the graph and its relationships by zooming in and out and moving around.
 
 ## How it works?
 
-gpt-graph works by providing a custom prompt which instructs the model on what to do with the incoming text and how to format the output. It can be provided with a list of entities to look for, or be left for the model to decide. Once you have the graph on screen, you can provide subsequent pieces of text and the application will try to merge the new information with the existing graph.
+gpt-graph works by providing a custom prompt that instructs the model on how to handle the incoming text and format the output. It can be given a list of entities to identify or left to the model's discretion. Once the graph is on the screen, subsequent pieces of text can be added, and the application will attempt to merge the new information with the existing graph.
 
-This subsequent calls to add new text are stateless, meaning that existing graph information is not passed to the model as a starting point, this greatly reduces token compsuption, and allows for larger graphs to be generated. The downside of this approach is that entities may get duplicated if they are written sligly different across the text.
+These subsequent calls to add new text are stateless, which means that existing graph information is not used as a starting point. This greatly reduces token consumption and enables the creation of larger graphs. However, the downside of this approach is that entities may be duplicated if they are written slightly differently across the text.
 
 ## You need an OpenAI API Key !
 
-In order to make requests to the OpenAI API, you'll need to register at [the OpenAI platform](https://platform.openai.com), and go to the 'User Settings' to genereta an Api 
-
 To make requests to the OpenAI API, you'll need to register on the [the OpenAI platform](https://platform.openai.com) and go to the 'User Settings' to generate an API Key. You can then copy and paste the API key into the gpr-graph configuration dialog. Please note that the OpenAI API is a paid service, although if you simply want to try it out, there are free credits available upon registration that will allow for plenty of experimentation.
 
+## Technology
+
+The project makes use of electron, Vue.js and cytoscape graph library. Axios is also used to make http requests.
+
+## Binaries
+
+If you dont want to build the project from source, here are some packaged binaries you can use:
+
+| Platform   |      Are      |
+|------------|:-------------:|
+| windows    |  left-aligned |
+| linux      |    centered   |
+| Mac        | right-aligned |
 
 ## Project setup
 ```
