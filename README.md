@@ -12,6 +12,13 @@ gpt-graph works by providing a custom prompt which instructs the model on what t
 
 This subsequent calls to add new text are stateless, meaning that existing graph information is not passed to the model as a starting point, this greatly reduces token compsuption, and allows for larger graphs to be generated. The downside of this approach is that entities may get duplicated if they are written sligly different across the text.
 
+## You need an OpenAI API Key !
+
+In order to make requests to the OpenAI API, you'll need to register at [the OpenAI platform](https://platform.openai.com), and go to the 'User Settings' to genereta an Api 
+
+To make requests to the OpenAI API, you'll need to register on the [the OpenAI platform](https://platform.openai.com) and go to the 'User Settings' to generate an API Key. You can then copy and paste the API key into the gpr-graph configuration dialog. Please note that the OpenAI API is a paid service, although if you simply want to try it out, there are free credits available upon registration that will allow for plenty of experimentation.
+
+
 ## Project setup
 ```
 npm install
