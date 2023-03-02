@@ -1,2 +1,3 @@
 node_modules
 dist_electron
+dist_electron/index.js
