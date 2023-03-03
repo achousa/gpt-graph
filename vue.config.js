@@ -9,7 +9,10 @@ module.exports = {
       nodeIntegration: true,
       customFileProtocol: './',
       builderOptions: {
-        appId: "gpt-graph"
+        appId: "gpt-graph",
+        win: {
+          icon: 'public/icon.png'
+        }
       }
     }
   }
