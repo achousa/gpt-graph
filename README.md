@@ -52,3 +52,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Attributions
+
+Vectors and icons by <a href="https://dribbble.com/nixxdsgn?ref=svgrepo.com" target="_blank">Nixx Design</a> in CC Attribution License via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>

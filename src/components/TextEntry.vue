@@ -17,7 +17,7 @@
     <Chips v-model="entityTypes" style="width: 100%" />
     <template #footer>
       <Button label="Cancel" icon="pi pi-times" class="p-button-text" @click="this.hide()" />
-      <Button label="Proceed" icon="pi pi-check" autofocus @click="this.processText(this.input)" />
+      <Button label="Proceed" icon="pi pi-check" autofocus @click="this.processText(this.input)" :disabled="!this.input" />
     </template>
   </Dialog>
   <Toast position="bottom-right" />
@@ -119,6 +119,7 @@ export default {
         const graph = this.json2graph(completion);
         this.$emit('incomingGraph', graph);
         this.$toast.add({ severity: 'success', summary: 'Success', detail: graph.nodes.length + ' Entities where added to the graph', life: 3000 });
+        this.input = "";
 
       } catch (error) {
         if(error.code == 'ERR_BAD_REQUEST'){
@@ -129,7 +130,6 @@ export default {
           this.$toast.add({ severity: 'error', summary: 'There was a problem', detail: 'There was a poblem making the request: ' + error, life: 8000 });
         }
         this.$emit('incomingGraph', null);
-        console.log(error);
         console.error(error);
       }
     }
