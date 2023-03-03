@@ -24,11 +24,7 @@ The project makes use of electron, Vue.js and cytoscape graph library. Axios is 
 
 If you dont want to build the project from source, here are some packaged binaries you can use:
 
-| Platform   |      Are      |
-|------------|:-------------:|
-| windows    |  left-aligned |
-| linux      |    centered   |
-| Mac        | right-aligned |
+[https://github.com/achousa/gpt-graph/releases](https://github.com/achousa/gpt-graph/releases)
 
 ## Project setup
 ```
