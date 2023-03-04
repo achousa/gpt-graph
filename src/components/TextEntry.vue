@@ -30,8 +30,8 @@ import Textarea from 'primevue/textarea';
 //import InputText from 'primevue/inputtext';
 //import Slider from 'primevue/slider';
 import Chips from 'primevue/chips';
-import OpenAIDavinciService from './OpenAIDavinciService.js';
-import ColorService from './ColorService.js';
+import OpenAIDavinciService from '../services/OpenAIDavinciService.js';
+import ColorService from '../services/ColorService.js';
 import Toast from 'primevue/toast';
 
 export default {

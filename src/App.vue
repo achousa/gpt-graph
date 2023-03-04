@@ -70,7 +70,7 @@ import TextEntry from "./components/TextEntry";
 import ConfigDialog from "./components/ConfigDialog";
 import NodeAttributes from "./components/NodeAttributes";
 import Menu from 'primevue/menu';
-import ColorService from './components/ColorService.js';
+import ColorService from './services/ColorService.js';
 import Toast from 'primevue/toast';
 import fs from 'fs'
 

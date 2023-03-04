@@ -18,7 +18,7 @@
 import Button from 'primevue/button';
 import Dialog from 'primevue/dialog';
 import InputText from 'primevue/inputtext';
-import OpenAIDavinciService from './OpenAIDavinciService.js';
+import OpenAIDavinciService from '../services/OpenAIDavinciService.js';
 import Toast from 'primevue/toast';
 
 export default {
