@@ -18,7 +18,7 @@ To make requests to the OpenAI API, you'll need to register on the [the OpenAI p
 
 ## Technology
 
-The project makes use of electron, Vue.js and cytoscape graph library. Axios is also used to make http requests.
+The project makes use of [Electron](https://www.electronjs.org/), [Vue.js](https://vuejs.org/) and [cytoscape](https://js.cytoscape.org/) graph library. [Axios](https://github.com/axios/axios) is also used to make http requests to the [OpenAI Api](https://openai.com/product).
 
 ## Binaries
 
