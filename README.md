@@ -2,6 +2,8 @@
 
 ![gpt-graph](https://github.com/achousa/gpt-graph/blob/main/extras/gpt-graph.png?raw=true)
 
+### Online Demo: https://gpt-graph.loca.lt/
+
 gpt-graph is a text-to-graph application that uses GPT-3 to generate a graph of entities and their relationships. GPT-3 is a language model developed by OpenAI that can perform a variety of natural language tasks, including text generation, translation, and summarization. With gpt-graph, users can provide a text document to the application, and it will extract the relevant entities and their relationships to create a graph. It can also search for information in the text that cannot be represented as relations, and label the entities with those attributes.
 
 ![gpt-graph](https://github.com/achousa/gpt-graph/blob/main/extras/gtp-graph-attrs.png?raw=true)
@@ -27,6 +29,14 @@ The project makes use of [Electron](https://www.electronjs.org/), [Vue.js](https
 If you dont want to build the project from source, here are some packaged binaries you can use:
 
 [https://github.com/achousa/gpt-graph/releases](https://github.com/achousa/gpt-graph/releases)
+
+## Online Demo
+
+If you don't want to download the application, you still can try this online demo:
+
+https://gpt-graph.loca.lt/
+
+Note: The web version is lacking "load file" functionality due to browser sandboxing. The application loads as a static asset, API Key get's stored solely in your browser local storage.
 
 ## Project setup
 ```
