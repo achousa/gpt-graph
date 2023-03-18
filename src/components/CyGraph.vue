@@ -215,18 +215,33 @@ export default {
         let newNodes = new Array();
         let newEdges = new Array();
         let equivalences = new Map();
-        for (let node in graph.nodes) {
+        for (let nodeId in graph.nodes) {
           // find out is this node is already in the graph
-          const equivalentNodeId = this.findEquivalent(graph.nodes[node].data.label);
-          if (!equivalentNodeId) {
+          let actualNode = graph.nodes[nodeId];
+          const equivalentNode = this.findEquivalent(actualNode.data.label);
+          if (!equivalentNode) {
             // there is none, add as new node
-            newNodes.push(graph.nodes[node]);
+            newNodes.push(actualNode);
           } else {
-            // we dont add a new node to the graph, instead we take
-            // note of the equivalent id
-            equivalences.set(graph.nodes[node].data.id, equivalentNodeId);
+            // An equivalent node already exists, lets merge it's attributes
+            // and take note of the equivalent id
+            for (let key in actualNode.data.attributes) {
+              // catch errors for each attribute.
+              try {
+                let value = actualNode.data.attributes[key];
+                if (!equivalentNode.data()['attributes']) {
+                  equivalentNode.data()['attributes'] = [];
+                }
+                equivalentNode.data()['attributes'][key] = value;
+              } catch (error) {
+                console.error(error);
+              }
+            }
+            //equivalentNode.data()['attributes'] = equivalentNode.data()['attributes'] + actualNode.data.attributes;
+            equivalences.set(actualNode.data.id, equivalentNode.data()['id']);
           }
         }
+        console.log(equivalences);
         // relations need to be adjusted if they point to an equivalent node
         for (let index in graph.relations) {
           // find out if we have an equivalence of source id
@@ -281,7 +296,7 @@ export default {
       this.cy.nodes().forEach(function (node) {
         const candidateLabel = node.data()['label'];
         if (similarity(label, candidateLabel) > 80) {
-          candidates.push(node.data()['id']);
+          candidates.push(node);
         }
       });
       if (candidates.length > 0) {

@@ -188,7 +188,7 @@ export default {
       if (!data) {
         this.$refs.nodeAttributes.hide();
       } else {
-        if (data.attributes) {
+        //if (data.attributes) {
           // the component only likes to display maps
           const attributeMap = new Map();
           for (const element in data.attributes) {
@@ -196,7 +196,7 @@ export default {
           }
           this.currentNode = { id: data.id, label: data.label, attributes: attributeMap };
           this.$refs.nodeAttributes.show();
-        }
+        //}
       }
     }
   }

@@ -124,8 +124,8 @@ export default {
       } catch (error) {
         if(error.code == 'ERR_BAD_REQUEST'){
           this.$toast.add({ severity: 'error', summary: 'There was a problem', detail: 'The request has failed, probably becouse the text is too long. Try processing it in batches.: ' + error, life: 8000 });          
-        } else if(error.contains('Unexpected end of JSON')) {
-            this.$toast.add({ severity: 'error', summary: 'There was a problem', detail: 'The response message was not complete, please try again.' + error, life: 8000 });
+        //} else if(error.contains('Unexpected end of JSON')) {
+        //    this.$toast.add({ severity: 'error', summary: 'There was a problem', detail: 'The response message was not complete, please try again.' + error, life: 8000 });
         } else {
           this.$toast.add({ severity: 'error', summary: 'There was a problem', detail: 'There was a poblem making the request: ' + error, life: 8000 });
         }

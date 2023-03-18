@@ -1,6 +1,6 @@
 <template>
   <div class="attributes-overlay p-component" v-if="display" >
-    <div style="margin-bottom: 5px;"><strong>{{ node.label }}</strong></div>
+    <div style="margin-bottom: 5px;"><strong><!--({{ node.id }}) -->{{ node.label }}</strong></div>
     <table style="width: 100%;">
       <tr v-for="[key, value] in node.attributes" :key="key">
         <td class="attribute-key">{{key}}:</td>

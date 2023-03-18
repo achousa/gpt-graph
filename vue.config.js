@@ -3,6 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: true
 })
 
+
 module.exports = {
   pluginOptions: {
     electronBuilder: {
