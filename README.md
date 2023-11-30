@@ -28,14 +28,6 @@ If you dont want to build the project from source, here are some packaged binari
 
 [https://github.com/achousa/gpt-graph/releases](https://github.com/achousa/gpt-graph/releases)
 
-## Online Demo
-
-If you don't want to download the application, you still can try this online demo:
-
-https://gpt-graph.loca.lt/
-
-Note: The web version is lacking "load file" functionality due to browser sandboxing. The application loads as a static asset, API Key get's stored solely in your browser local storage.
-
 ## Project setup
 ```
 npm install
